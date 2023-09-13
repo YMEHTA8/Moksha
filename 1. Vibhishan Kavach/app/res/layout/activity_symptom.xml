@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF484264"
+    tools:context=".SymptomActivity"
+    tools:layout_editor_absoluteX="-3dp"
+    tools:layout_editor_absoluteY="26dp">
+
+    <Spinner
+        android:id="@+id/spinner"
+        style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+        android:layout_width="184dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="33dp"
+        android:popupBackground="@color/white"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/list_Symptom"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.579" />
+
+    <TextView
+        android:id="@+id/list_Symptom"
+        android:layout_width="131dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="17dp"
+        android:text="Symptom: "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_rating"
+        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.696" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="233dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="335dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="81dp"
+        android:progressTint="@android:color/holo_orange_light"
+        app:layout_constraintBottom_toTopOf="@+id/btn_upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_rating"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_rating"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="334dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="180dp"
+        android:text="Rating:"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/page_sign"
+        app:layout_constraintEnd_toStartOf="@+id/ratingBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="217dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Upload Symptom"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/page_sign"
+        app:layout_constraintStart_toStartOf="@+id/page_sign"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <Button
+        android:id="@+id/page_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="98dp"
+        android:backgroundTint="@android:color/system_accent1_700"
+        android:text="Go To Sign Measurements"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_rating" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
